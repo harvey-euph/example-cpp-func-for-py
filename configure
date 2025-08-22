@@ -1,0 +1,15 @@
+mkdir -p build
+cd build
+
+case "$1" in
+    release|r)
+        build_type="Release"
+        ;;
+    debug|d)
+        build_type="Debug"
+        ;;
+    *)
+        build_type="Release"
+esac
+
+cmake .. 
